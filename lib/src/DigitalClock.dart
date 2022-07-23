@@ -9,14 +9,13 @@ class DigitalClock extends StatefulWidget {
   final bool showNumbers;
   final bool showAllNumbers;
   final bool showSeconds;
-  final bool useMilitaryTime;
-
+  final BoxDecoration decoration;
   final Color digitalClockColor;
   final Color numberColor;
   final bool isLive;
   final double textScaleFactor;
 
-  const DigitalClock({this.datetime, this.showNumbers = true, this.showSeconds = true, this.showAllNumbers = false, this.useMilitaryTime = true, this.digitalClockColor = Colors.black, this.numberColor = Colors.black, this.textScaleFactor = 1.0, isLive, Key? key})
+  const DigitalClock({this.datetime, this.showNumbers = true, this.showSeconds = true, this.decoration = const BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.showAllNumbers = false, this.digitalClockColor = Colors.black, this.numberColor = Colors.black, this.textScaleFactor = 1.0, isLive, Key? key})
       : this.isLive = isLive ?? (datetime == null),
         super(key: key);
 
@@ -57,8 +56,9 @@ class _DigitalClockState extends State<DigitalClock> {
     return Container(
         constraints: BoxConstraints(minWidth: 50.0, minHeight: 20.0),
         // width: double.infinity,
+        decoration: widget.decoration,
         child: CustomPaint(
-          painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, useMilitaryTime: widget.useMilitaryTime, digitalClockColor: widget.digitalClockColor, textScaleFactor: widget.textScaleFactor, numberColor: widget.numberColor),
+          painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, digitalClockColor: widget.digitalClockColor, textScaleFactor: widget.textScaleFactor, numberColor: widget.numberColor),
         ));
   }
 

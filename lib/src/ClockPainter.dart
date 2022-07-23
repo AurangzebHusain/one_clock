@@ -178,8 +178,6 @@ class AnalogClockPainter extends CustomPainter {
 class DigitalClockPainter extends CustomPainter {
   DateTime datetime;
 
-  final bool useMilitaryTime;
-
   final Color digitalClockColor;
   final Color numberColor;
   final double textScaleFactor;
@@ -187,7 +185,14 @@ class DigitalClockPainter extends CustomPainter {
   //digital clock
   final bool showSeconds;
 
-  DigitalClockPainter({required this.datetime, this.textStyle, this.showSeconds = true, this.digitalClockColor = Colors.black, this.numberColor = Colors.black, this.textScaleFactor = 1.0, this.useMilitaryTime = true});
+  DigitalClockPainter({
+    required this.datetime,
+    this.textStyle,
+    this.showSeconds = true,
+    this.digitalClockColor = Colors.black,
+    this.numberColor = Colors.black,
+    this.textScaleFactor = 1.0,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
