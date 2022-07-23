@@ -27,7 +27,7 @@ dependencies:
 import 'package:one_clock/one_clock.dart';
 
 
-<!-- AnalogClock(
+ AnalogClock(
 	decoration: BoxDecoration(
 	    border: Border.all(width: 2.0, color: Colors.black),
 	    color: Colors.transparent,
@@ -45,7 +45,7 @@ import 'package:one_clock/one_clock.dart';
 	showDigitalClock: false,
 	datetime: DateTime(2019, 1, 1, 9, 12, 15),
 	);
-``` -->
+``` 
 
 ## Parameters
 
