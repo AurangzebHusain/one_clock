@@ -1,7 +1,7 @@
 # Flutter One Clock Widget
 [![pub package](https://img.shields.io/pub/v/analog_clock.svg)](https://pub.dartlang.org/packages/analog_clock)
 
-Clean and fully customizable analog clock widget.
+Clean and fully customizable clock widget.
 
 ![Flutter Analog Clock Screenshot](https://github.com/furkantektas/analog_clock/raw/master/doc/sample_screenshot.png?raw=true)
 
@@ -53,6 +53,3 @@ import 'package:one_clock/one_clock.dart';
 ![Flutter Analog Clock Parameters](https://github.com/furkantektas/analog_clock/raw/master/doc/visual_doc.png?raw=true)
 
 
-<!-- ## Example
-
-Demo app can be found in the [`example/`](https://github.com/furkantektas/analog_clock/tree/master/example) folder. -->
