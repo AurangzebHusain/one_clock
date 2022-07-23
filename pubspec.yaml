@@ -1,6 +1,8 @@
 name: one_clock
 version: 1.0.1
-description: "This package can be used to build a digital as well as analog clock. Written on the top of analog_clock package."
+description: "Flutter analog and digital clock plugin"
+homepage: https://github.dev/AurangzebHusain/one_clock
+
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
