@@ -14,7 +14,7 @@ In your `pubspec.yaml` file within your Flutter Project:
 
 ```yaml
 dependencies:
-  one_clock: ^1.0.3
+  one_clock: ^1.0.4
 ```
 
 ## Features
@@ -47,6 +47,16 @@ import 'package:one_clock/one_clock.dart';
 	showDigitalClock: false,
 	datetime: DateTime(2019, 1, 1, 9, 12, 15),
 	);
+
+	DigitalClock(
+	showSeconds: false,
+	digitalClockColor: Colors.black,
+	decoration:BoxDecoration(
+		border://
+		color://
+		shape://
+	)
+	 datetime: DateTime.now())
 ```
 
 ## Parameters
