@@ -1,7 +1,7 @@
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart' as INTL;
 
 class AnalogClockPainter extends CustomPainter {
   DateTime datetime;
@@ -193,7 +193,7 @@ class DigitalClockPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     double scaleFactor = 1;
 
-    _paintDigitalClock(canvas, size, scaleFactor, useMilitaryTime);
+    _paintDigitalClock(canvas, size, scaleFactor);
   }
 
   @override
@@ -201,21 +201,8 @@ class DigitalClockPainter extends CustomPainter {
     return oldDelegate.datetime.isBefore(datetime);
   }
 
-  void _paintDigitalClock(Canvas canvas, Size size, double scaleFactor, bool useMilitaryTime) {
-    int hourInt = datetime.hour;
-    String meridiem = '';
-    if (!useMilitaryTime) {
-      if (hourInt > 12) {
-        hourInt = hourInt - 12;
-        meridiem = ' PM';
-      } else {
-        meridiem = ' AM';
-      }
-    }
-    String hour = hourInt.toString().padLeft(2, "0");
-    String minute = datetime.minute.toString().padLeft(2, "0");
-    String second = datetime.second.toString().padLeft(2, "0");
-    String textToBeDisplayed = "$hour:$minute" + (showSeconds ? ":$second" : "") + meridiem;
+  void _paintDigitalClock(Canvas canvas, Size size, double scaleFactor) {
+    String textToBeDisplayed = INTL.DateFormat('h:mm a').format(datetime);
     TextSpan digitalClockSpan = TextSpan(style: textStyle ?? TextStyle(color: digitalClockColor, fontSize: 18 * scaleFactor * textScaleFactor, fontWeight: FontWeight.bold), text: textToBeDisplayed);
     TextPainter digitalClockTP = TextPainter(text: digitalClockSpan, textAlign: TextAlign.center, textDirection: TextDirection.ltr);
     digitalClockTP.layout();
