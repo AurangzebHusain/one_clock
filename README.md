@@ -6,7 +6,9 @@ Clean and fully customizable clock widget.
 
 Note: This package is inspired from the analog_clock package which is for showing analog clock only. You can check that package here [`analog_clock`](https://pub.dev/packages/analog_clock) folder.
 
-![Flutter Analog Clock Screenshot](https://github.com/furkantektas/analog_clock/raw/master/doc/sample_screenshot.png?raw=true)
+![Analog Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Analog_Clock.png?raw=true)
+
+![Digital Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Digital_Clock.png?raw=true)
 
 ## Installation
 
@@ -14,7 +16,7 @@ In your `pubspec.yaml` file within your Flutter Project:
 
 ```yaml
 dependencies:
-  one_clock: ^1.0.5
+  one_clock: ^1.0.6
 ```
 
 ## Features
