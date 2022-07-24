@@ -59,7 +59,7 @@ class _DigitalClockState extends State<DigitalClock> {
       decoration: widget.decoration,
       padding: widget.padding,
       child: Container(
-          constraints: BoxConstraints(minWidth: 85.0, minHeight: 20.0),
+          constraints: BoxConstraints(minWidth: widget.showSeconds ? 110 * widget.textScaleFactor : 85.0 * widget.textScaleFactor, minHeight: 20.0 * widget.textScaleFactor),
           child: CustomPaint(
             painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, digitalClockTextColor: widget.digitalClockTextColor, textScaleFactor: widget.textScaleFactor),
           )),

@@ -45,6 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              const Text(
+                "Analog Clock Example",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               SingleChildScrollView(
                 // padding: EdgeInsets.all(7),
                 scrollDirection: Axis.horizontal,
@@ -96,11 +103,29 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: BoxDecoration(color: Colors.cyan[100], shape: BoxShape.circle),
                       datetime: DateTime.now(),
                     ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    AnalogClock(
+                      width: 120,
+                      height: 120,
+                      isLive: true,
+                      showDigitalClock: false,
+                      decoration: BoxDecoration(color: Colors.red[100], shape: BoxShape.circle),
+                      datetime: DateTime.now(),
+                    ),
                   ],
                 ),
               ),
               const SizedBox(
                 height: 20,
+              ),
+              const Text(
+                "Digital Clock Example",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 30,
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -108,7 +133,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     DigitalClock(
+                      showSeconds: true,
                       datetime: DateTime.now(),
+                      textScaleFactor: 1.3,
                       isLive: true,
                     ),
                     const SizedBox(
@@ -129,6 +156,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     DigitalClock(
                       datetime: DateTime.now(),
+                      textScaleFactor: 2,
+                      showSeconds: false,
                       isLive: true,
                       decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
                     ),
@@ -258,7 +287,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
