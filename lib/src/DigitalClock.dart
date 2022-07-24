@@ -15,11 +15,43 @@ class DigitalClock extends StatefulWidget {
   final bool isLive;
   final double textScaleFactor;
 
-  const DigitalClock({this.datetime, this.showSeconds = true, this.decoration, this.padding, this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, isLive, Key? key})
+  const DigitalClock(
+      {this.datetime,
+      this.showSeconds = true,
+      this.decoration,
+      this.padding,
+      this.digitalClockTextColor = Colors.black,
+      this.textScaleFactor = 1.0,
+      isLive,
+      Key? key})
       : this.isLive = isLive ?? (datetime == null),
         super(key: key);
-  const DigitalClock.dark({this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.white, this.textScaleFactor = 1.0, this.isLive = false, Key? key}) : super(key: key);
-  const DigitalClock.light({this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, this.isLive = false, Key? key}) : super(key: key);
+  const DigitalClock.dark(
+      {this.datetime,
+      this.showSeconds = true,
+      this.padding,
+      this.decoration = const BoxDecoration(
+          color: Colors.black,
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.all(Radius.circular(15))),
+      this.digitalClockTextColor = Colors.white,
+      this.textScaleFactor = 1.0,
+      this.isLive = false,
+      Key? key})
+      : super(key: key);
+  const DigitalClock.light(
+      {this.datetime,
+      this.showSeconds = true,
+      this.padding,
+      this.decoration = const BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.all(Radius.circular(15))),
+      this.digitalClockTextColor = Colors.black,
+      this.textScaleFactor = 1.0,
+      this.isLive = false,
+      Key? key})
+      : super(key: key);
 
   @override
   _DigitalClockState createState() => _DigitalClockState(datetime);
@@ -37,7 +69,8 @@ class _DigitalClockState extends State<DigitalClock> {
   initState() {
     super.initState();
     // don't repaint the clock every second if second hand is not shown
-    updateDuration = widget.showSeconds ? Duration(seconds: 1) : Duration(minutes: 1);
+    updateDuration =
+        widget.showSeconds ? Duration(seconds: 1) : Duration(minutes: 1);
 
     if (widget.isLive) {
       // update clock every second or minute based on second hand's visibility.
@@ -59,9 +92,17 @@ class _DigitalClockState extends State<DigitalClock> {
       decoration: widget.decoration,
       padding: widget.padding,
       child: Container(
-          constraints: BoxConstraints(minWidth: widget.showSeconds ? 110 * widget.textScaleFactor : 85.0 * widget.textScaleFactor, minHeight: 20.0 * widget.textScaleFactor),
+          constraints: BoxConstraints(
+              minWidth: widget.showSeconds
+                  ? 110 * widget.textScaleFactor
+                  : 85.0 * widget.textScaleFactor,
+              minHeight: 20.0 * widget.textScaleFactor),
           child: CustomPaint(
-            painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, digitalClockTextColor: widget.digitalClockTextColor, textScaleFactor: widget.textScaleFactor),
+            painter: DigitalClockPainter(
+                showSeconds: widget.showSeconds,
+                datetime: datetime,
+                digitalClockTextColor: widget.digitalClockTextColor,
+                textScaleFactor: widget.textScaleFactor),
           )),
     );
   }

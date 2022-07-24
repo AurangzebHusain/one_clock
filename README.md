@@ -1,12 +1,14 @@
 # Flutter One Clock Widget
 
-[![pub package](https://img.shields.io/pub/v/analog_clock.svg)](https://pub.dartlang.org/packages/analog_clock)
+[![pub package](https://img.shields.io/pub/v/analog_clock.svg)](https://pub.dartlang.org/packages/one_clock)
 
 Clean and fully customizable clock widget.
 
 Note: This package is inspired from the analog_clock package which is for showing analog clock only. You can check that package here [`analog_clock`](https://pub.dev/packages/analog_clock) folder.
 
 ![Analog Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Analog_Clock.png?raw=true)
+
+
 
 ![Digital Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Digital_Clock.png?raw=true)
 
@@ -16,7 +18,7 @@ In your `pubspec.yaml` file within your Flutter Project:
 
 ```yaml
 dependencies:
-  one_clock: ^1.0.6
+  one_clock: ^1.0.7
 ```
 
 ## Features
@@ -52,13 +54,13 @@ import 'package:one_clock/one_clock.dart';
 
 DigitalClock(
 	showSeconds: false,
+	isLive:false,
 	digitalClockColor: Colors.black,
-	decoration:BoxDecoration(
-		border://
-		color://
-		shape://
-	)
-	 datetime: DateTime.now())
+	decoration: const BoxDecoration(
+		color: Colors.yellow,
+		shape: BoxShape.rectangle,
+		borderRadius: BorderRadius.all(Radius.circular(15))),
+		datetime: DateTime.now())
 ```
 
 ## Parameters

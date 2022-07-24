@@ -67,7 +67,8 @@ class AnalogClock extends StatefulWidget {
       this.tickColor: Colors.grey,
       this.digitalClockColor: Colors.white,
       this.numberColor: Colors.white,
-      this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+      this.decoration =
+          const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
       Key? key})
       : super(key: key);
 
@@ -86,7 +87,8 @@ class _AnalogClockState extends State<AnalogClock> {
   initState() {
     super.initState();
     // don't repaint the clock every second if second hand is not shown
-    updateDuration = widget.showSecondHand ? Duration(seconds: 1) : Duration(minutes: 1);
+    updateDuration =
+        widget.showSecondHand ? Duration(seconds: 1) : Duration(minutes: 1);
 
     if (widget.isLive) {
       // update clock every second or minute based on second hand's visibility.
