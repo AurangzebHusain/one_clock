@@ -1,7 +1,7 @@
 name: one_clock
-version: 1.0.4
-description: "Flutter analog and digital clock plugin"
-homepage: https://github.dev/AurangzebHusain/one_clock
+version: 1.0.5
+description: "Flutter analog and digital clock plugin. This plugin can be used to draw beautiful analog as well as digital clock for your flutter application"
+homepage: https://github.com/AurangzebHusain/one_clock
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
