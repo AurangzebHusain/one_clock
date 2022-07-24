@@ -6,18 +6,20 @@ import './ClockPainter.dart';
 class DigitalClock extends StatefulWidget {
   final DateTime? datetime;
 
-  final bool showNumbers;
-  final bool showAllNumbers;
+  // final bool showNumbers;
+  // final bool showAllNumbers;
   final bool showSeconds;
-  final BoxDecoration decoration;
-  final Color digitalClockColor;
-  final Color numberColor;
+  final BoxDecoration? decoration;
+  final Color digitalClockTextColor;
+  final EdgeInsets? padding;
   final bool isLive;
   final double textScaleFactor;
 
-  const DigitalClock({this.datetime, this.showNumbers = true, this.showSeconds = true, this.decoration = const BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.showAllNumbers = false, this.digitalClockColor = Colors.black, this.numberColor = Colors.black, this.textScaleFactor = 1.0, isLive, Key? key})
+  const DigitalClock({this.datetime, this.showSeconds = true, this.decoration, this.padding, this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, isLive, Key? key})
       : this.isLive = isLive ?? (datetime == null),
         super(key: key);
+  const DigitalClock.dark({this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.white, this.textScaleFactor = 1.0, this.isLive = false, Key? key}) : super(key: key);
+  const DigitalClock.light({this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, this.isLive = false, Key? key}) : super(key: key);
 
   @override
   _DigitalClockState createState() => _DigitalClockState(datetime);
@@ -54,12 +56,14 @@ class _DigitalClockState extends State<DigitalClock> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        constraints: BoxConstraints(minWidth: 50.0, minHeight: 20.0),
-        // width: double.infinity,
-        decoration: widget.decoration,
-        child: CustomPaint(
-          painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, digitalClockColor: widget.digitalClockColor, textScaleFactor: widget.textScaleFactor, numberColor: widget.numberColor),
-        ));
+      decoration: widget.decoration,
+      padding: widget.padding,
+      child: Container(
+          constraints: BoxConstraints(minWidth: 85.0, minHeight: 20.0),
+          child: CustomPaint(
+            painter: DigitalClockPainter(showSeconds: widget.showSeconds, datetime: datetime, digitalClockTextColor: widget.digitalClockTextColor, textScaleFactor: widget.textScaleFactor),
+          )),
+    );
   }
 
   @override

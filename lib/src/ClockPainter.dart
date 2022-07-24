@@ -178,8 +178,7 @@ class AnalogClockPainter extends CustomPainter {
 class DigitalClockPainter extends CustomPainter {
   DateTime datetime;
 
-  final Color digitalClockColor;
-  final Color numberColor;
+  final Color digitalClockTextColor;
   final double textScaleFactor;
   final TextStyle? textStyle;
   //digital clock
@@ -189,8 +188,7 @@ class DigitalClockPainter extends CustomPainter {
     required this.datetime,
     this.textStyle,
     this.showSeconds = true,
-    this.digitalClockColor = Colors.black,
-    this.numberColor = Colors.black,
+    this.digitalClockTextColor = Colors.black,
     this.textScaleFactor = 1.0,
   });
 
@@ -208,7 +206,7 @@ class DigitalClockPainter extends CustomPainter {
 
   void _paintDigitalClock(Canvas canvas, Size size, double scaleFactor) {
     String textToBeDisplayed = INTL.DateFormat('h:mm a').format(datetime);
-    TextSpan digitalClockSpan = TextSpan(style: textStyle ?? TextStyle(color: digitalClockColor, fontSize: 18 * scaleFactor * textScaleFactor, fontWeight: FontWeight.bold), text: textToBeDisplayed);
+    TextSpan digitalClockSpan = TextSpan(style: textStyle ?? TextStyle(color: digitalClockTextColor, fontSize: 18 * scaleFactor * textScaleFactor, fontWeight: FontWeight.bold), text: textToBeDisplayed);
     TextPainter digitalClockTP = TextPainter(text: digitalClockSpan, textAlign: TextAlign.center, textDirection: TextDirection.ltr);
     digitalClockTP.layout();
     digitalClockTP.paint(canvas, size.center(-digitalClockTP.size.center(Offset(0.0, 0.0))));

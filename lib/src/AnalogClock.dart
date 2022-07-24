@@ -45,31 +45,31 @@ class AnalogClock extends StatefulWidget {
       this.width = double.infinity,
       this.height = double.infinity,
       this.decoration = const BoxDecoration(),
-      isLive,
+      this.isLive = true,
       Key? key})
-      : this.isLive = isLive ?? (datetime == null),
-        super(key: key);
+      : super(key: key);
 
-  const AnalogClock.dark({datetime, showDigitalClock = true, showTicks = true, showNumbers = true, showAllNumbers = false, showSecondHand = true, useMilitaryTime = true, isLive: false, double width = double.infinity, double height = double.infinity, decoration = const BoxDecoration(), Key? key})
-      : this(
-            datetime: datetime,
-            showDigitalClock: showDigitalClock,
-            showTicks: showTicks,
-            showNumbers: showNumbers,
-            showAllNumbers: showAllNumbers,
-            showSecondHand: showSecondHand,
-            useMilitaryTime: useMilitaryTime,
-            width: width,
-            height: height,
-            hourHandColor: Colors.white,
-            minuteHandColor: Colors.white,
-            secondHandColor: Colors.orange,
-            tickColor: Colors.grey,
-            digitalClockColor: Colors.white,
-            numberColor: Colors.white,
-            decoration: decoration,
-            isLive: isLive,
-            key: key);
+  const AnalogClock.dark(
+      {this.datetime,
+      this.showDigitalClock = true,
+      this.showTicks = true,
+      this.showNumbers = true,
+      this.showAllNumbers = false,
+      this.showSecondHand = true,
+      this.useMilitaryTime = true,
+      this.isLive = true,
+      this.textScaleFactor = 1.0,
+      this.width = double.infinity,
+      this.height = double.infinity,
+      this.hourHandColor: Colors.white,
+      this.minuteHandColor: Colors.white,
+      this.secondHandColor: Colors.orange,
+      this.tickColor: Colors.grey,
+      this.digitalClockColor: Colors.white,
+      this.numberColor: Colors.white,
+      this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+      Key? key})
+      : super(key: key);
 
   @override
   _AnalogClockState createState() => _AnalogClockState(datetime);
