@@ -12,3 +12,8 @@
 # Version 1.0.7
 
 - Improved example file for analog and digital clock
+
+
+# Version 1.0.8
+
+- Fixed clock not getting updated when isLive is true
