@@ -61,12 +61,12 @@ class AnalogClock extends StatefulWidget {
       this.textScaleFactor = 1.0,
       this.width = double.infinity,
       this.height = double.infinity,
-      this.hourHandColor: Colors.white,
-      this.minuteHandColor: Colors.white,
-      this.secondHandColor: Colors.orange,
-      this.tickColor: Colors.grey,
-      this.digitalClockColor: Colors.white,
-      this.numberColor: Colors.white,
+      this.hourHandColor = Colors.white,
+      this.minuteHandColor = Colors.white,
+      this.secondHandColor = Colors.orange,
+      this.tickColor = Colors.grey,
+      this.digitalClockColor = Colors.white,
+      this.numberColor = Colors.white,
       this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
       Key? key})
       : super(key: key);

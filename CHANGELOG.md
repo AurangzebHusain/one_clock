@@ -17,3 +17,8 @@
 # Version 1.0.8
 
 - Fixed clock not getting updated when isLive is true
+
+# Version 1.0.9
+
+- Updated intl package to latest version 0.18.1
+- Fixed clock not getting updated when isLive is true but showSeconds is false
