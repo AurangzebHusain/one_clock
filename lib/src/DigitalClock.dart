@@ -100,7 +100,6 @@ class _DigitalClockState extends State<DigitalClock> {
   @override
   void didUpdateWidget(DigitalClock oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print("DID UPDATE WIDGET CALLED");
 
     if (!widget.isLive && widget.datetime != oldWidget.datetime) {
       datetime = widget.datetime ?? DateTime.now();
