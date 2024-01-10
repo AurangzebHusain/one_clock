@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               AnalogClockExample(dateTime),
               const SizedBox(
-                height: 20,
+                height: 50,
               ),
               ...DigitalClockExample(dateTime)
             ],
@@ -73,7 +73,7 @@ Widget AnalogClockExample(DateTime dateTimee) {
       children: [
         const Text(
           "Analog Clock Example",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
         ),
         const SizedBox(
           height: 30,
@@ -152,10 +152,10 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
         children: [
           const Text(
             "Digital Clock Example",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
           ),
           const SizedBox(
-            height: 30,
+            height: 50,
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
@@ -319,7 +319,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
       ),
     ),
     const SizedBox(
-      height: 20,
+      height: 50,
     ),
     SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -327,10 +327,10 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
         children: [
           const Text(
             "Digital Clock Example with custom INTL format",
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
           ),
           const SizedBox(
-            height: 30,
+            height: 50,
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
