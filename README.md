@@ -8,8 +8,6 @@ Note: This package is inspired from the analog_clock package which is for showin
 
 ![Analog Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Analog_Clock.png?raw=true)
 
-
-
 ![Digital Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Digital_Clock.png?raw=true)
 
 ## Installation
@@ -18,7 +16,7 @@ In your `pubspec.yaml` file within your Flutter Project:
 
 ```yaml
 dependencies:
-  one_clock: ^1.0.7
+  one_clock: ^2.0.0
 ```
 
 ## Features
