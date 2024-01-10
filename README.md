@@ -6,9 +6,7 @@ Clean and fully customizable clock widget.
 
 Note: This package is inspired from the analog_clock package which is for showing analog clock only. You can check that package here [`analog_clock`](https://pub.dev/packages/analog_clock) folder.
 
-![Analog Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Analog_Clock.png?raw=true)
-
-![Digital Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Digital_Clock.png?raw=true)
+![Analog/Digital Clock Screenshot](https://github.com/AurangzebHusain/one_clock/blob/master/Example_Image.png?raw=true)
 
 ## Installation
 
