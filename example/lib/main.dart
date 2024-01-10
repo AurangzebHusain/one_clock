@@ -52,23 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const Text(
-                "Analog Clock Example",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
               AnalogClockExample(dateTime),
               const SizedBox(
                 height: 20,
-              ),
-              const Text(
-                "Digital Clock Example",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(
-                height: 30,
               ),
               ...DigitalClockExample(dateTime)
             ],
@@ -83,64 +69,75 @@ Widget AnalogClockExample(DateTime dateTimee) {
   return SingleChildScrollView(
     // padding: EdgeInsets.all(7),
     scrollDirection: Axis.horizontal,
-    child: Row(
+    child: Column(
       children: [
-        AnalogClock(
-          isLive: false,
-          width: 120,
-          height: 120,
-          datetime: dateTimee,
+        const Text(
+          "Analog Clock Example",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
         ),
         const SizedBox(
-          width: 10,
+          height: 30,
         ),
-        AnalogClock.dark(
-          width: 120,
-          height: 120,
-          isLive: true,
-          datetime: dateTimee,
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        AnalogClock(
-          width: 120,
-          height: 120,
-          isLive: true,
-          decoration: BoxDecoration(color: Colors.green[100], shape: BoxShape.circle),
-          datetime: dateTimee,
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        AnalogClock(
-          width: 120,
-          height: 120,
-          isLive: true,
-          decoration: BoxDecoration(color: Colors.yellow[100], shape: BoxShape.circle),
-          datetime: dateTimee,
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        AnalogClock(
-          width: 120,
-          height: 120,
-          isLive: true,
-          showDigitalClock: false,
-          decoration: BoxDecoration(color: Colors.cyan[100], shape: BoxShape.circle),
-          datetime: dateTimee,
-        ),
-        const SizedBox(
-          width: 10,
-        ),
-        AnalogClock(
-          width: 120,
-          height: 120,
-          isLive: true,
-          showDigitalClock: false,
-          decoration: BoxDecoration(color: Colors.red[100], shape: BoxShape.circle),
-          datetime: dateTimee,
+        Row(
+          children: [
+            AnalogClock(
+              isLive: false,
+              width: 120,
+              height: 120,
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock.dark(
+              width: 120,
+              height: 120,
+              isLive: true,
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock(
+              width: 120,
+              height: 120,
+              isLive: true,
+              decoration: BoxDecoration(color: Colors.green[100], shape: BoxShape.circle),
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock(
+              width: 120,
+              height: 120,
+              isLive: true,
+              decoration: BoxDecoration(color: Colors.yellow[100], shape: BoxShape.circle),
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock(
+              width: 120,
+              height: 120,
+              isLive: true,
+              showDigitalClock: false,
+              decoration: BoxDecoration(color: Colors.cyan[100], shape: BoxShape.circle),
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock(
+              width: 120,
+              height: 120,
+              isLive: true,
+              showDigitalClock: false,
+              decoration: BoxDecoration(color: Colors.red[100], shape: BoxShape.circle),
+              datetime: dateTimee,
+            ),
+          ],
         ),
       ],
     ),
@@ -151,53 +148,64 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
   return [
     SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
+      child: Column(
         children: [
-          DigitalClock(
-            showSeconds: true,
-            datetime: dateTimee,
-            textScaleFactor: 1.3,
-            isLive: true,
+          const Text(
+            "Digital Clock Example",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
           ),
           const SizedBox(
-            width: 10,
+            height: 30,
           ),
-          DigitalClock.dark(
-            datetime: dateTimee,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          DigitalClock.light(
-            isLive: true,
-            datetime: dateTimee,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          DigitalClock(
-            datetime: dateTimee,
-            textScaleFactor: 2,
-            showSeconds: false,
-            isLive: true,
-            decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          DigitalClock(
-            datetime: dateTimee,
-            isLive: true,
-            decoration: const BoxDecoration(color: Colors.green, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-          DigitalClock(
-            datetime: dateTimee,
-            isLive: true,
-            decoration: const BoxDecoration(color: Colors.yellow, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              DigitalClock(
+                showSeconds: true,
+                datetime: dateTimee,
+                textScaleFactor: 1.3,
+                isLive: true,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock.dark(
+                datetime: dateTimee,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock.light(
+                isLive: true,
+                datetime: dateTimee,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock(
+                datetime: dateTimee,
+                textScaleFactor: 2,
+                showSeconds: false,
+                isLive: true,
+                decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock(
+                datetime: dateTimee,
+                isLive: true,
+                decoration: const BoxDecoration(color: Colors.green, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock(
+                datetime: dateTimee,
+                isLive: true,
+                decoration: const BoxDecoration(color: Colors.yellow, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
+              ),
+            ],
           ),
         ],
       ),
@@ -307,6 +315,64 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
             datetime: dateTimee,
             decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           )
+        ],
+      ),
+    ),
+    const SizedBox(
+      height: 20,
+    ),
+    SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        children: [
+          const Text(
+            "Digital Clock Example with custom INTL format",
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              DigitalClock(
+                format: "H",
+                showSeconds: true,
+                datetime: dateTimee,
+                textScaleFactor: 1.3,
+                isLive: true,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock.dark(
+                format: "Hm",
+                datetime: dateTimee,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              DigitalClock.light(
+                format: "Hms",
+                isLive: true,
+                datetime: dateTimee,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                child: DigitalClock(
+                  format: 'yMMMEd',
+                  datetime: dateTimee,
+                  textScaleFactor: 1,
+                  showSeconds: false,
+                  isLive: true,
+                  // decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     ),
