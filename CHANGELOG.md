@@ -27,3 +27,7 @@
 - Updated dependencies
 - Added formatter paramter which accepts intl formatter skeleton to customize the formatting.
 - Updated example with 24HR time display
+
+# Version 2.0.1
+
+- Updated intl package to new stable version 0.19.0

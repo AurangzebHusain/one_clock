@@ -27,9 +27,9 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/sanam/.pub-cache/hosted/pub.dev/intl-0.18.1",
+      "rootUri": "file:///Users/sanam/.pub-cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "material_color_utilities",
@@ -74,7 +74,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-01-10T14:38:06.668588Z",
+  "generated": "2024-05-15T17:18:34.957010Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }
