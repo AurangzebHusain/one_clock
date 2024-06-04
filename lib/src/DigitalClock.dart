@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+
 import './ClockPainter.dart';
 
 class DigitalClock extends StatefulWidget {
@@ -30,10 +31,12 @@ class DigitalClock extends StatefulWidget {
 }
 
 class _DigitalClockState extends State<DigitalClock> {
+  late final Timer? _timer;
+
   DateTime initialDatetime; // to keep track of time changes
   DateTime datetime;
-
   Duration updateDuration = const Duration(seconds: 1); // repaint frequency
+
   _DigitalClockState(datetime)
       : this.datetime = datetime ?? DateTime.now(),
         initialDatetime = datetime ?? DateTime.now();
@@ -41,11 +44,11 @@ class _DigitalClockState extends State<DigitalClock> {
   initState() {
     super.initState();
 
-    updateDuration = Duration(seconds: 1);
     if (widget.isLive) {
       // update clock every second or minute based on second hand's visibility.
-
-      Timer.periodic(updateDuration, update);
+      _timer = Timer.periodic(updateDuration, update);
+    } else {
+      _timer = null;
     }
   }
 
@@ -55,6 +58,13 @@ class _DigitalClockState extends State<DigitalClock> {
       this.datetime = this.initialDatetime.add(updateDuration * timer.tick);
       setState(() {});
     }
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+
+    super.dispose();
   }
 
   @override
