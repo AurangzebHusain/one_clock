@@ -31,3 +31,7 @@
 # Version 2.0.1
 
 - Updated intl package to new stable version 0.19.0
+
+# Version 2.0.2
+
+- Updated packages

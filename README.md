@@ -14,7 +14,7 @@ In your `pubspec.yaml` file within your Flutter Project:
 
 ```yaml
 dependencies:
-  one_clock: ^2.0.1
+  one_clock: ^2.0.2
 ```
 
 ## Features
