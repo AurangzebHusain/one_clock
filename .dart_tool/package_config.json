@@ -3,61 +3,61 @@
   "packages": [
     {
       "name": "characters",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/characters-1.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.4"
     },
     {
       "name": "clock",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/clock-1.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.4"
     },
     {
       "name": "collection",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/collection-1.19.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.4"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///C:/development/sdks/flutter/packages/flutter",
+      "rootUri": "file:///Users/aurhusai/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/intl-0.20.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
-      "name": "intl",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "material_color_utilities",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/meta-1.16.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.4"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///C:/development/sdks/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/aurhusai/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.7"
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///C:/Users/Menno/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///Users/aurhusai/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -68,10 +68,9 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-06-04T09:05:54.622262Z",
   "generator": "pub",
-  "generatorVersion": "3.4.0",
-  "flutterRoot": "file:///C:/development/sdks/flutter",
-  "flutterVersion": "3.22.0",
-  "pubCache": "file:///C:/Users/Menno/AppData/Local/Pub/Cache"
+  "generatorVersion": "3.8.1",
+  "flutterRoot": "file:///Users/aurhusai/flutter",
+  "flutterVersion": "3.32.5",
+  "pubCache": "file:///Users/aurhusai/.pub-cache"
 }

@@ -219,16 +219,16 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
         mainAxisSize: MainAxisSize.min,
         children: [
           DigitalClock(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
             isLive: true,
           ),
           DigitalClock.dark(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
           ),
           DigitalClock.light(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             isLive: true,
             datetime: dateTimee,
           )
@@ -299,18 +299,18 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
         mainAxisSize: MainAxisSize.min,
         children: [
           DigitalClock(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
             decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
             isLive: true,
           ),
           DigitalClock.dark(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
             decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           DigitalClock.light(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             isLive: true,
             datetime: dateTimee,
             decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
@@ -361,7 +361,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
                 width: 10,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                 child: DigitalClock(
                   format: 'yMMMEd',
                   datetime: dateTimee,
