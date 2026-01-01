@@ -10,3 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.20.2
+
+fonts:
+    - family: DSDigital
+      fonts:
+        - asset: fonts/DS-Digital.ttf
