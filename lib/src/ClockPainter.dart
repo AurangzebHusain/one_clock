@@ -199,8 +199,9 @@ class AnalogClockPainter extends CustomPainter {
     String second = datetime.second.toString().padLeft(2, "0");
     TextSpan digitalClockSpan = new TextSpan(
         style: TextStyle(
-            color: digitalClockColor,
-            fontSize: 18 * scaleFactor * textScaleFactor),
+          color: digitalClockColor,
+          fontSize: 18 * scaleFactor * textScaleFactor,
+        ),
         text: "$hour:$minute:$second$meridiem");
     TextPainter digitalClockTP = new TextPainter(
         text: digitalClockSpan,
