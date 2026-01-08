@@ -21,11 +21,49 @@ class DigitalClock extends StatefulWidget {
   ///For more info about skeletons please refer to this site https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html
   final String? format;
 
-  const DigitalClock({this.format, this.datetime, this.showSeconds = true, this.decoration, this.padding, this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, this.textStyle, isLive, Key? key})
+  const DigitalClock(
+      {this.format,
+      this.datetime,
+      this.showSeconds = true,
+      this.decoration,
+      this.padding,
+      this.digitalClockTextColor = Colors.black,
+      this.textScaleFactor = 1.0,
+      this.textStyle,
+      isLive,
+      Key? key})
       : this.isLive = isLive ?? (datetime == null),
         super(key: key);
-  const DigitalClock.dark({this.format, this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.white, this.textScaleFactor = 1.0, this.textStyle, this.isLive = false, Key? key}) : super(key: key);
-  const DigitalClock.light({this.format, this.datetime, this.showSeconds = true, this.padding, this.decoration = const BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))), this.digitalClockTextColor = Colors.black, this.textScaleFactor = 1.0, this.textStyle, this.isLive = false, Key? key}) : super(key: key);
+  const DigitalClock.dark(
+      {this.format,
+      this.datetime,
+      this.showSeconds = true,
+      this.padding,
+      this.decoration = const BoxDecoration(
+          color: Colors.black,
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.all(Radius.circular(15))),
+      this.digitalClockTextColor = Colors.white,
+      this.textScaleFactor = 1.0,
+      this.textStyle,
+      this.isLive = false,
+      Key? key})
+      : super(key: key);
+  const DigitalClock.light(
+      {this.format,
+      this.datetime,
+      this.showSeconds = true,
+      this.padding,
+      this.decoration = const BoxDecoration(
+          color: Colors.white,
+          shape: BoxShape.rectangle,
+          borderRadius: BorderRadius.all(Radius.circular(15))),
+      this.digitalClockTextColor = Colors.black,
+      this.textScaleFactor = 1.0,
+      this.textStyle,
+      this.isLive = false,
+      Key? key})
+      : super(key: key);
 
   @override
   _DigitalClockState createState() => _DigitalClockState(datetime);
@@ -74,9 +112,19 @@ class _DigitalClockState extends State<DigitalClock> {
       decoration: widget.decoration,
       padding: widget.padding,
       child: Container(
-          constraints: BoxConstraints(minWidth: widget.showSeconds ? 110 * widget.textScaleFactor : 85.0 * widget.textScaleFactor, minHeight: 20.0 * widget.textScaleFactor),
+          constraints: BoxConstraints(
+              minWidth: widget.showSeconds
+                  ? 110 * widget.textScaleFactor
+                  : 85.0 * widget.textScaleFactor,
+              minHeight: 20.0 * widget.textScaleFactor),
           child: CustomPaint(
-            painter: DigitalClockPainter(textStyle: widget.textStyle, format: widget.format, showSeconds: widget.showSeconds, datetime: datetime, digitalClockTextColor: widget.digitalClockTextColor, textScaleFactor: widget.textScaleFactor),
+            painter: DigitalClockPainter(
+                textStyle: widget.textStyle,
+                format: widget.format,
+                showSeconds: widget.showSeconds,
+                datetime: datetime,
+                digitalClockTextColor: widget.digitalClockTextColor,
+                textScaleFactor: widget.textScaleFactor),
           )),
     );
   }
