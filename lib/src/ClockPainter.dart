@@ -18,6 +18,7 @@ class AnalogClockPainter extends CustomPainter {
   final Color digitalClockColor;
   final Color numberColor;
   final double textScaleFactor;
+  final TextStyle? textStyle;
 
   static const double BASE_SIZE = 320.0;
   static const double MINUTES_IN_HOUR = 60.0;
@@ -40,6 +41,7 @@ class AnalogClockPainter extends CustomPainter {
     this.numberColor = Colors.black,
     this.showAllNumbers = false,
     this.textScaleFactor = 1.0,
+    this.textStyle,
     this.useMilitaryTime = true,
   });
 
@@ -168,7 +170,7 @@ class AnalogClockPainter extends CustomPainter {
     String hour = hourInt.toString().padLeft(2, "0");
     String minute = datetime.minute.toString().padLeft(2, "0");
     String second = datetime.second.toString().padLeft(2, "0");
-    TextSpan digitalClockSpan = new TextSpan(style: TextStyle(color: digitalClockColor, fontSize: 18 * scaleFactor * textScaleFactor), text: "$hour:$minute:$second$meridiem");
+    TextSpan digitalClockSpan = new TextSpan(style: textStyle ?? TextStyle(color: digitalClockColor, fontSize: 18 * scaleFactor * textScaleFactor), text: "$hour:$minute:$second$meridiem");
     TextPainter digitalClockTP = new TextPainter(text: digitalClockSpan, textAlign: TextAlign.center, textDirection: TextDirection.ltr);
     digitalClockTP.layout();
     digitalClockTP.paint(canvas, size.center(-digitalClockTP.size.center(Offset(0.0, -size.shortestSide / 6))));
