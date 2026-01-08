@@ -35,3 +35,7 @@
 # Version 2.0.2
 
 - Updated packages
+
+# Version 2.0.3
+
+- Added dynamic text style
