@@ -32,12 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   DateTime dateTime = DateTime.now();
 
-  void _setNewDateTime(DateTime dateTiime) {
-    setState(() {
-      dateTime = dateTiime;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,11 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              AnalogClockExample(dateTime),
+              analogClockExample(dateTime),
               const SizedBox(
                 height: 50,
               ),
-              ...DigitalClockExample(dateTime)
+              ...digitalClockExample(dateTime)
             ],
           ),
         ),
@@ -65,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-Widget AnalogClockExample(DateTime dateTimee) {
+Widget analogClockExample(DateTime dateTimee) {
   return SingleChildScrollView(
     // padding: EdgeInsets.all(7),
     scrollDirection: Axis.horizontal,
@@ -102,8 +96,7 @@ Widget AnalogClockExample(DateTime dateTimee) {
               width: 120,
               height: 120,
               isLive: true,
-              decoration: BoxDecoration(
-                  color: Colors.green[100], shape: BoxShape.circle),
+              decoration: BoxDecoration(color: Colors.green[100], shape: BoxShape.circle),
               datetime: dateTimee,
             ),
             const SizedBox(
@@ -113,20 +106,7 @@ Widget AnalogClockExample(DateTime dateTimee) {
               width: 120,
               height: 120,
               isLive: true,
-              decoration: BoxDecoration(
-                  color: Colors.yellow[100], shape: BoxShape.circle),
-              datetime: dateTimee,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            AnalogClock(
-              width: 120,
-              height: 120,
-              isLive: true,
-              showDigitalClock: false,
-              decoration: BoxDecoration(
-                  color: Colors.cyan[100], shape: BoxShape.circle),
+              decoration: BoxDecoration(color: Colors.yellow[100], shape: BoxShape.circle),
               datetime: dateTimee,
             ),
             const SizedBox(
@@ -137,8 +117,18 @@ Widget AnalogClockExample(DateTime dateTimee) {
               height: 120,
               isLive: true,
               showDigitalClock: false,
-              decoration:
-                  BoxDecoration(color: Colors.red[100], shape: BoxShape.circle),
+              decoration: BoxDecoration(color: Colors.cyan[100], shape: BoxShape.circle),
+              datetime: dateTimee,
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            AnalogClock(
+              width: 120,
+              height: 120,
+              isLive: true,
+              showDigitalClock: false,
+              decoration: BoxDecoration(color: Colors.red[100], shape: BoxShape.circle),
               datetime: dateTimee,
             ),
           ],
@@ -148,7 +138,7 @@ Widget AnalogClockExample(DateTime dateTimee) {
   );
 }
 
-List<Widget> DigitalClockExample(DateTime dateTimee) {
+List<Widget> digitalClockExample(DateTime dateTimee) {
   return [
     SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -191,10 +181,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
                 textScaleFactor: 2,
                 showSeconds: false,
                 isLive: true,
-                decoration: const BoxDecoration(
-                    color: Colors.cyan,
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
               ),
               const SizedBox(
                 width: 10,
@@ -202,10 +189,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
               DigitalClock(
                 datetime: dateTimee,
                 isLive: true,
-                decoration: const BoxDecoration(
-                    color: Colors.green,
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: const BoxDecoration(color: Colors.green, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
               ),
               const SizedBox(
                 width: 10,
@@ -213,10 +197,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
               DigitalClock(
                 datetime: dateTimee,
                 isLive: true,
-                decoration: const BoxDecoration(
-                    color: Colors.yellow,
-                    shape: BoxShape.rectangle,
-                    borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration: const BoxDecoration(color: Colors.yellow, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
               ),
             ],
           ),
@@ -259,19 +240,14 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock(
             datetime: dateTimee,
             isLive: true,
-            decoration: const BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           const SizedBox(
             width: 10,
           ),
           DigitalClock.dark(
             datetime: dateTimee,
-            decoration: const BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           const SizedBox(
             width: 10,
@@ -279,9 +255,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock.light(
             isLive: true,
             datetime: dateTimee,
-            decoration: const BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           const SizedBox(
             width: 10,
@@ -289,10 +263,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock(
             datetime: dateTimee,
             isLive: true,
-            decoration: const BoxDecoration(
-                color: Colors.cyan,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(color: Colors.cyan, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           const SizedBox(
             width: 10,
@@ -300,10 +271,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock(
             datetime: dateTimee,
             isLive: true,
-            decoration: const BoxDecoration(
-                color: Colors.green,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(color: Colors.green, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           const SizedBox(
             width: 10,
@@ -311,10 +279,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock(
             datetime: dateTimee,
             isLive: true,
-            decoration: const BoxDecoration(
-                color: Colors.yellow,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.circular(15))),
+            decoration: const BoxDecoration(color: Colors.yellow, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(15))),
           ),
         ],
       ),
@@ -330,26 +295,19 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
           DigitalClock(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
-            decoration: const BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
             isLive: true,
           ),
           DigitalClock.dark(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             datetime: dateTimee,
-            decoration: const BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           ),
           DigitalClock.light(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             isLive: true,
             datetime: dateTimee,
-            decoration: const BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.all(Radius.zero)),
+            decoration: const BoxDecoration(shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.zero)),
           )
         ],
       ),
@@ -397,8 +355,7 @@ List<Widget> DigitalClockExample(DateTime dateTimee) {
                 width: 10,
               ),
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                 child: DigitalClock(
                   format: 'yMMMEd',
                   datetime: dateTimee,
