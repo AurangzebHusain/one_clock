@@ -38,4 +38,4 @@
 
 # Version 2.0.3
 
-- Added dynamic text style
+- Added dynamic text style for digital as well as analog clock
